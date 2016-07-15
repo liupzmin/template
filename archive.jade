@@ -1,0 +1,26 @@
+extends base
+block content
+	entries = get_data(type='post', limit=40, sort='desc',tags=request.args.tag)
+	entries = entries.group('-date:year+month')
+	.post
+		for sub_title, posts in entries
+			.post-archive
+				//h2= sub_title
+				ptitle = ''
+				each t in sub_title
+					test = t + ''
+					if test.length == 4
+						ptitle = t + '/'
+					elif test.length == 1
+						ptitle = ptitle + '0' + t
+					elif test.length == 2
+						ptitle = ptitle +  t
+					if ptitle.length > 5
+						h2= ptitle
+				ul.listing
+					for post in posts
+						li
+							span.date= post.date.format("%Y/%m/%d")
+							a(href=post.url, title=post.title)= post.title
+	include include/paginator.jade
+

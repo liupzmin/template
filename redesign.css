@@ -1,0 +1,28 @@
+.pure-u-7-24 {
+    width: 18%;
+}
+
+.pure-u-md-17-24 {
+    width: 82%;
+}
+
+.content_container {
+    padding-right: 0px;
+    padding-left: 30px;
+    padding-top: 0px;
+}
+
+#sidebar {
+    border-left: 0px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-top: 25px;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+}
+
+.pure-g,#layout{
+		margin-top: 15px;	
+}
