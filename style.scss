@@ -119,6 +119,9 @@ a:focus{
 			display: block;
 			font-weight: normal;
 		}
+		.widget-title,.widget-search{
+			border-bottom: 0px;
+		}
 		ul {
 			list-style: none;
 			padding: 0;
@@ -139,7 +142,7 @@ a:focus{
 		position: relative;
 		overflow: hidden;
 		input {
-			padding: 12px 30px 11px 15px;
+			padding: 3px 10px 3px 5px;
 			line-height: 1.5;
 			border:1px solid #ddd;
 			width:100%;
@@ -147,6 +150,7 @@ a:focus{
 			-moz-box-sizing:border-box;
 			box-sizing:border-box;
 			outline:none;
+			font-family: serif;
 		}
 	}
 }

@@ -7,6 +7,7 @@ html
 	+_('Links', '友情链接', 'zh_cn')
 	+_('About', '关于', 'zh_cn')
 	+_('Recent', '最新文章', 'zh_cn')
+	+_('Search', '站内搜索', 'zh_cn')
 	head
 		+mobile_meta()
 		meta(name="keywords", content=site.configs.keywords.escaped)
@@ -41,8 +42,9 @@ html
 
 			.pure-u-7-24:#sidebar
 				.widget
+					.widget-title.widget-search= _('Search')
 					form#search
-						input#search_value.text(placeholder="Search",type="text",value=request.args.s, onkeyup="if (event.keyCode == 13) search();")
+						input#search_value.text(placeholder="Search this website",type="text",value=request.args.s, onkeyup="if (event.keyCode == 13) search();")
 				.widget
 					.widget-title= _('Recent')
 					newess_posts = get_data(path='/', type='post', limit=10, sort='desc', with_page=False)
