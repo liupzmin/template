@@ -30,3 +30,11 @@
 ul.subcate {
     margin-left: 20px;
 }
+
+code, .codehilite pre {
+    word-break: break-word;
+    color: #8cd0d3;
+    background-color: #3f3f3f;
+    padding: 20px;
+    border-radius: 19px;
+}
