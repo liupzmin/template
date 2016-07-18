@@ -54,11 +54,17 @@ html
 								a(href=post.url, title=post.title)= post.title
 				.widget
 					.widget-title= _('Categories')
-					categories = get_data(type='folder', level=[1,2], min_posts_count=1)
+					categories = get_data(type='folder', level=[0,1], min_posts_count=1)
 					ul
 						for cate in categories
 							li
 								a(href="/category/{{ cate.path }}")= cate.title + '(' + cate.posts_count + ')'
+								subcategories = get_data(type='folder', path="/" + cate.path + "/",level=[0,1], min_posts_count=1)
+								if subcategories
+									ul.subcate
+										for subcate in subcategories
+											li
+												a(href="/category/{{ subcate.path }}")= subcate.title + '(' + subcate.posts_count + ')'
 				.widget
 					.widget-title= _('Archive')
 					atvhive_posts = get_data(type='post', limit=400, sort='desc').group('-date:year+month')
