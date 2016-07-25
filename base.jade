@@ -4,7 +4,8 @@ html
 	+_('Albums', '相册', 'zh_cn')
 	+_('Categories', '分类', 'zh_cn')
 	+_('Archive', '归档', 'zh_cn')
-	+_('Links', '友情链接', 'zh_cn')
+	+_('Flinks', '友情链接', 'zh_cn')
+	+_('Links', '先生纸上谈的兵', 'zh_cn')
 	+_('About', '关于', 'zh_cn')
 	+_('Recent', '最新文章', 'zh_cn')
 	+_('Search', '站内搜索', 'zh_cn')
@@ -86,7 +87,7 @@ html
 										li
 											a(href='/archive?tag=' +ad ,title=ad)= pd + '(' + post.length + ')'
 				.widget
-					.widget-title= _('Links')
+					.widget-title= _('Flinks')
 						ul
 							li
 								a(href='http://www.52coder.net',target='_blank')= '52coder的博客'
