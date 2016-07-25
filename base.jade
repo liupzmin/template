@@ -15,6 +15,7 @@ html
 		block title
 			title= request.args.s or post.title or tags.join('+') or category.title or site.title
 		+get_resource("blog_basic.css")
+		+load('/template/jquery-3.1.0.js')
 		+load('pure#0.5.0')
 		+load('/service/static_3rd/staticfile/ajax/libs/pure/0.5.0/grids-responsive-min.css')
 		+load('/template/style.scss')
@@ -30,7 +31,6 @@ html
 				if has('categories')
 					+a_with_selected('/categories', _('Categories'))
 				+a_with_selected('/archive', _('Archive'))
-				+a_with_selected('/about', _('About'))
 				for p in get_data(status='pages', type='post', limit=5, with_page=False, sort='position')
 					+a_with_selected('/'+p.path, _(p.filename.split('.')[0].title()))
 				if has('images')
@@ -90,10 +90,12 @@ html
 						ul
 							li
 								a(href='http://www.52coder.net',target='_blank')= '52coder的博客'
+							li
+								a(href='http://www.askmaclean.com/',target='_blank')= '我敬佩的askmaclean'
+								
 
 			.pure-u-1.pure-u-md-17-24:.content_container
 				block content
-
 
 		#footer= '© '
 			a(href='/', real="nofollow")= site.title
@@ -112,4 +114,4 @@ html
 				  location.href = 'http://' + location.host + '?s=' + document.getElementById('search_value').value;
 				}
 				return false;
-			 }
+			 };
