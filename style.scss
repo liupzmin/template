@@ -33,7 +33,7 @@ body {
 	border-top:  1px solid rgba(150, 150, 150, 0.2);
 }
 a, button.submit {
-	color: #6E7173;
+	color: #444;
 	text-decoration: none;
 	-webkit-transition: all .1s ease-in;
 	-moz-transition: all .1s ease-in;
@@ -72,7 +72,7 @@ a:focus{
 		}
 		.description {
 			margin: .5em 0 0 .5em;
-			color: #999;
+			color: #080808;
 		}
 	}
 	#nav-menu {
@@ -86,7 +86,7 @@ a:focus{
 			padding: 1px 20px 0;
 			height: 30px;
 			line-height: 30px;
-			color: #444;
+			color: #080808;
 			font-size: 13px;
 			border: 1px solid transparent;
 			&:hover {
@@ -111,7 +111,7 @@ a:focus{
 	.widget {
 		margin-bottom: 30px;
 		.widget-title {
-			color: #6E7173;
+			color: #080808;
 			line-height: 2.7;
 			margin-top: 0;
 			font-size: 13px;

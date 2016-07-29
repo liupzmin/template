@@ -1,6 +1,6 @@
 html
 	// i18n
-	+_('Blog', '博客', 'zh_cn')
+	+_('Home', '首页', 'zh_cn')
 	+_('Albums', '相册', 'zh_cn')
 	+_('Categories', '分类', 'zh_cn')
 	+_('Archive', '归档', 'zh_cn')
@@ -15,10 +15,9 @@ html
 		meta(name="description", content=site.raw_content.escaped)
 		block title
 			title= request.args.s or post.title or tags.join('+') or category.title or site.title
-		+get_resource("blog_basic.css")
-		+load('/template/jquery-3.1.0.js')
-		+load('pure#0.5.0')
-		+load('/service/static_3rd/staticfile/ajax/libs/pure/0.5.0/grids-responsive-min.css')
+		+load('/template/blog_basic.css')
+		+load('/template/pure-min.css')
+		+load('/template/grids-responsive-min.css')
 		+load('/template/style.scss')
 		+load('/template/redesign.css')
 	body:.body_container
@@ -28,7 +27,7 @@ html
 				a#logo(href='/')= site.title
 				p.description= site.raw_content
 			#nav-menu
-				+a_with_selected('/', _('Blog'), dom_id='nav_blog')
+				+a_with_selected('/', _('Home'), dom_id='nav_blog')
 				if has('categories')
 					+a_with_selected('/categories', _('Categories'))
 				+a_with_selected('/archive', _('Archive'))
