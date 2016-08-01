@@ -54,7 +54,7 @@ html
 								a(href=post.url, title=post.title)= post.title
 				.widget
 					.widget-title= _('Categories')
-					categories = get_data(type='folder', level=[0,1], min_posts_count=1)
+					categories = get_data(type='folder', level=[0,1], min_posts_count=1,sort='position')
 					ul
 						for cate in categories
 							li
