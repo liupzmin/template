@@ -17,9 +17,10 @@ body {
 }
 
 .body_container {
-	padding: 0 60px;
-	max-width: 85%;
-	margin: 0 auto;
+	padding: 0 10px;
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .content_container {
@@ -318,14 +319,14 @@ a:focus{
 	margin: 0;
 
 	.category{
-		margin: 10px 0 20px 0;
+		margin: 10px 0 10px 0;
 		text-align: center;
 		a {
-			text-align: left;
-			display: inline-block;
-			border: 1px solid #ddd;
-			padding: 10px 20px;
-			min-width: 100px;
+			text-align: center;
+    		display: inline-block;
+    		border: 1px solid #ddd;
+    		padding: 10px;
+    		width: 150px;
 			h3 {
 				margin: 0;
 			}
